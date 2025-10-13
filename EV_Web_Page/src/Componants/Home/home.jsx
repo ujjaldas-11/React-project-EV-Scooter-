@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function home() {
   return (
@@ -65,7 +66,11 @@ function home() {
       <section className="gallery" id="gallery">
         <h2 className="section-title">Gallery</h2>
         <div className="gallery-grid">
-          <div className="gallery-item"></div>
+          <div className="gallery-item">
+            <Link to={'/pages/details'}>
+              <button className='text-black bg-white w-[100px] text-center border rounded-2xl'>Details</button>
+            </Link>
+          </div>
           <div className="gallery-item"></div>
           <div className="gallery-item"></div>
           <div className="gallery-item"></div>
