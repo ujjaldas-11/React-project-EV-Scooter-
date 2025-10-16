@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import Style from './Componants/Style/style';
-import Navbar from './Componants/Navbar/navbar';
+// import Navbar from './Componants/Navbar/Navbar';
 import Home from './Componants/Home/home';
-import Footer from './Componants/Footer/footer';
+import Slider from './Componants/Slider/Slider';
+// import Footer from './Componants/Footer/Footer';
 
 export default function FutureEVsLanding() {
   const observerRef = useRef(null);
@@ -60,10 +60,10 @@ export default function FutureEVsLanding() {
   return (
     <>
     <div className="font-sans text-gray-900 overflow-x-hidden">
-      <Style />
-      <Navbar />
+      {/* <Navbar /> */}
+      <Slider/>
       <Home />
-      <Footer />
+      {/* <Footer /> */}
     </div>
     </>
   );
