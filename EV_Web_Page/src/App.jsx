@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-// import Navbar from './Componants/Navbar/Navbar';
 import Home from './Componants/Home/home';
 import Slider from './Componants/Slider/Slider';
-// import Footer from './Componants/Footer/Footer';
+import data from './data.json';
+
 
 export default function FutureEVsLanding() {
   const observerRef = useRef(null);
@@ -61,7 +61,7 @@ export default function FutureEVsLanding() {
     <>
     <div className="font-sans text-gray-900 overflow-x-hidden">
       {/* <Navbar /> */}
-      <Slider/>
+      <Slider slides={data.items.slice(0,5)}/>
       <Home />
       {/* <Footer /> */}
     </div>

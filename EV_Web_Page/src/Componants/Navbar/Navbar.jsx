@@ -59,8 +59,8 @@ function Navbar() {
             </li>
             <li>
               <NavLink to="/pages/save">
-                <button className="hover:underline">
-                  Save items
+                <button className="cursor-pointer">
+                  🔖 Save items
                 </button>
               </NavLink>
             </li>
