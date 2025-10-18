@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 function Slider({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const slideId = slides[currentIndex].id;
+  // console.log(slideId);
+
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -29,12 +32,13 @@ function Slider({ slides }) {
       {/* Slider Container */}
       <div className="w-full max-w-6xl mx-auto">
         {/* Image Container with Navigation */}
+          <Link to={`/pages/details/${slideId-1}`}>
         <div className="relative w-full aspect-video sm:aspect-[16/10] lg:aspect-[16/9] mb-2 sm:mb-4 lg:mb-6">
-          <img
-            className="w-full sm:h-[100%] md:h-[100%] lg:h-[80%] rounded-lg sm:rounded-xl lg:rounded-2xl border border-gray-300 shadow-lg object-contain"
-            src={slides[currentIndex].image}
-            alt={`Slide ${currentIndex + 1}`}
-          />
+            <img
+              className="w-full sm:h-[100%] md:h-[100%] lg:h-[80%] rounded-lg sm:rounded-xl lg:rounded-2xl border border-gray-300 shadow-lg object-contain"
+              src={slides[currentIndex].image}
+              alt={`Slide ${currentIndex + 1}`}
+            />
 
           {/* Navigation Buttons */}
           <div className="absolute inset-0 flex items-center justify-between px-2 sm:px-4 lg:px-6 sm:mb-10 md:mb-20 lg:mb-30">
@@ -78,7 +82,7 @@ function Slider({ slides }) {
             ))}
           </div>
         </div>
-
+          </Link>
         {/* Content Section */}
         <div className="flex flex-col items-center gap-4 sm:gap-6 text-center mt-10">
           <Link to={"/pages/gallery"}>

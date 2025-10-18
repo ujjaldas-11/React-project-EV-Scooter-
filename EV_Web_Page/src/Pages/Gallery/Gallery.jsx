@@ -13,7 +13,7 @@ function Gallery() {
               alt={`image no ${index}`}
             />
             <h3 className="text-center font-semibold ">{item.title}</h3>
-            <Link to={'/pages/details'}> 
+            <Link to={`/pages/details/${item.id-1}`}> 
               <button className="bg-[#1f2937] p-2 mt-2 text-white rounded-sm cursor-pointer">Show Details</button>
             </Link>
           </div>

@@ -60,11 +60,9 @@ export default function FutureEVsLanding() {
   return (
     <>
     <div className="font-sans text-gray-900 overflow-x-hidden">
-      {/* <Navbar /> */}
       <Slider slides={data.items.slice(0,5)}/>
       <Home />
-      {/* <Footer /> */}
     </div>
-    </>
+    </> 
   );
 }
